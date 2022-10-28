@@ -1,11 +1,8 @@
 <?php
 
 
-
-if (isset($_POST[''])) {
-    # code...
+if (isset($_POST['submit'])) {   
 }
-
 
 
 

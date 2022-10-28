@@ -14,11 +14,11 @@ require_once './assets/header.php';
 
             <div>
                 <label for="name">Nome</label>
-                <input type="text" name="name" id="name" placeholder="insira seu nome">
+                <input type="text" name="name" id="name" placeholder="insira seu nome" required>
             </div>
             <div class="passwordContainer">
                 <label for="pwd">Senha</label>
-                <input type="password" class="pwdInputs" name="pwd" id="pwd" placeholder="insira sua senha">
+                <input type="password" class="pwdInputs" name="pwd" id="pwd" placeholder="insira sua senha" required>
                 <ion-icon name="eye-off-outline" class="eye pwd-eye"></ion-icon>
             </div>
             <a href="forgotpwd.php">Esqueceu sua senha?</a>
