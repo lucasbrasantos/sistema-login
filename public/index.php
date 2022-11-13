@@ -9,9 +9,14 @@ require_once '../src/views/header.php';
 
 <?php
 
-if (isset($_SESSION['SessionId'])) {
-    
-    require_once './src/site.php';
+
+
+if (isset($_SESSION['userid'])) {
+
+    session_start();
+    ''
+    require_once '../src/site/site.php';
+
 
 }else{
     Header('Location: ../src/login/login.php');
