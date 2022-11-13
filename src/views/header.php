@@ -13,7 +13,6 @@
     <body>
         
         <div class="container">
-
             <nav id="nav">
                 <h1 class="navTitle">Sistema de login</h1>
 
