@@ -8,7 +8,10 @@ require_once '../views/header.php';
 
 <?php
 
-
+if (isset($_COOKIE['error']) == "email em uso") {
+    setcookie("error", "", time()-3600);
+    echo "<script>window.alert('email já usado, tente novamente')</script>";
+}
 
 ?>
 

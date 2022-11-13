@@ -35,13 +35,20 @@ if (isset($_POST['submit'])) {
         $sql = "insert into user (nome, sobrenome, senha, email) values (?, ?, ?, ?)";
         
         $stmt = $con->prepare($sql);
-        // $stmt->execute([$name, $lastName, $md5, $email]);
+        try {
+            $stmt->execute([$name, $lastName, $md5, $email]);
+        } catch (Exception $e) {
+            setcookie("error", "email em uso");
+            header("Location: ./register.php");            
+            exit();
+        }
+
+                
         
-        
-        include './random-values-register.php';
-        $_md5 = md5($_senha[array_rand($_senha, 1)]);
-        $stmt->execute([$_nome[array_rand($_nome, 1)], $_unome[array_rand($_unome, 1)], $_md5, $_email[array_rand($_email, 1)]]);
-        //random values from array
+        // include './random-values-register.php';
+        // $_md5 = md5($_senha[array_rand($_senha, 1)]);
+        // $stmt->execute([$_nome[array_rand($_nome, 1)], $_unome[array_rand($_unome, 1)], $_md5, $_email[array_rand($_email, 1)]]);
+        // //random values from array
         
 
         // header("Location: ./register.php?success");
