@@ -1,6 +1,6 @@
 <?php
 
-require_once './src/header.php';
+require_once '../views/header.php';
 
 ?>
 
@@ -13,7 +13,7 @@ require_once './src/header.php';
 ?>
 
     <div class="registerFrm">
-        <form action="./src/register-inc.php" method="post" name="register" id="register">
+        <form action="./register-inc.php" method="post" name="register" id="register">
 
             <h1 class="formTitle">Cadastrar</h1>
             
@@ -100,6 +100,6 @@ require_once './src/header.php';
 
 <?php
 
-require_once './src/footer.php';
+require_once '../views/footer.php';
 
 ?>

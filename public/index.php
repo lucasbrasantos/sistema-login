@@ -1,6 +1,6 @@
 <?php
 
-require_once './src/header.php';
+require_once '../src/views/header.php';
 
 ?>
 
@@ -14,7 +14,7 @@ if (isset($_SESSION['SessionId'])) {
     require_once './src/site.php';
 
 }else{
-    Header('Location: login.php');
+    Header('Location: ../src/login/login.php');
 }
 
 
@@ -26,6 +26,6 @@ if (isset($_SESSION['SessionId'])) {
 
 <?php
 
-require_once './src/footer.php';
+require_once '../src/views/footer.php';
 
 ?>

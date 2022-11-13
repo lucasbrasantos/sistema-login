@@ -4,7 +4,7 @@
 
 if (isset($_POST['submit'])) {
 
-    require './conection.php';
+    require '../../database/database.php';
 
     $name = $_POST['name'];
     $lastName = $_POST['lastName'];
@@ -15,16 +15,16 @@ if (isset($_POST['submit'])) {
 
     if (empty($name) || empty($lastName) || empty($email) || empty($pwd) || empty($pwd2)){
         //empty fields
-        Header('Location: ../register.php?error=emptyfields');
+        Header('Location: ./register.php?error=emptyfields');
         exit();
     }else if (preg_match("/([^a-zA-Z0-9-_])/", $name)) {
-        Header('Location: ../register.php?error=invalidusername');
+        Header('Location: ./register.php?error=invalidusername');
         
     }else if (preg_match("/([^a-zA-Z])/", $lastName)) {
-        Header('Location: ../register.php?error=invalidlastname');
+        Header('Location: ./register.php?error=invalidlastname');
         
     }else if ($pwd !== $pwd2) {
-        Header('Location: ../register.php?error=passwordsdonotmatch');
+        Header('Location: ./register.php?error=passwordsdonotmatch');
     }else{
 
 

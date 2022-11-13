@@ -1,13 +1,13 @@
 <?php
 
-require_once './src/header.php';
+require_once '../views/header.php';
 
 ?>
 
 <!-- html -->
 
     <div class="loginFrm">
-        <form action="assets/login-inc.php" name="login" id="login">
+        <form action="./login-inc.php" name="login" id="login">
 
             <h1 class="formTitle">Login</h1>
             
@@ -42,6 +42,6 @@ require_once './src/header.php';
 
 <?php
 
-require_once './src/footer.php';
+require_once '../views/footer.php';
 
 ?>
