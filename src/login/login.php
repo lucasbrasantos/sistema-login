@@ -13,8 +13,8 @@ require_once '../views/header.php';
             
 
             <div>
-                <label for="name">Nome</label>
-                <input type="text" name="name" id="name" placeholder="insira seu nome" required>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="name" placeholder="insira seu email" required>
             </div>
             <div class="passwordContainer">
                 <label for="pwd">Senha</label>
