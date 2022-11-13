@@ -7,7 +7,7 @@ require_once '../views/header.php';
 <!-- html -->
 
     <div class="loginFrm">
-        <form action="./login-inc.php" name="login" id="login">
+        <form action="./login-inc.php" method="post" name="login" id="login">
 
             <h1 class="formTitle">Login</h1>
             
