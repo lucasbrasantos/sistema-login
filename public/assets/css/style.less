@@ -44,7 +44,8 @@ body {
 	}
 
 	.buttons {
-		display: flex;
+		#flexCenter();
+		flex-direction: row;
 		gap: 0 2rem;
 
 		a {
@@ -58,6 +59,28 @@ body {
 			&:hover {
 				transform: scale(1.1);
 			}
+		}
+	}
+
+	.nav-profile-icon{
+		font-size: 34px;
+		color: @fontgray;
+		cursor: pointer;
+		transition: .2s;
+		position: relative;
+
+		&:hover{
+			transform: scale(1.02);
+			text-shadow: 0 0 0px 10px rgba(0, 0, 0, 100%);
+		}
+
+		&:before{
+			content: 'perfil';
+			position: absolute;
+			font-size: 16px;
+			bottom: -10px;
+			left: 0;
+			z-index: 1;
 		}
 	}
 }
