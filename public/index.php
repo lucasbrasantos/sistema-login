@@ -1,6 +1,7 @@
 <?php
 
-require_once '../src/views/header.php';
+require '../src/views/header.php';
+require '../src/views/nav1.php';
 
 ?>
 
@@ -9,17 +10,15 @@ require_once '../src/views/header.php';
 
 <?php
 
+session_start();
 
+if (isset($_SESSION['sessionid'])) {
 
-if (isset($_SESSION['userid'])) {
-
-    session_start();
-    ''
-    require_once '../src/site/site.php';
-
+    // require '../src/site/site.php';
+    Header('Location: ../src/site/site.php');
 
 }else{
-    Header('Location: ../src/login/login.php');
+    // Header('Location: ../src/login/login.php');
 }
 
 
@@ -31,6 +30,6 @@ if (isset($_SESSION['userid'])) {
 
 <?php
 
-require_once '../src/views/footer.php';
+require '../src/views/footer.php';
 
 ?>
