@@ -1,5 +1,6 @@
 <head>
     <link rel="stylesheet/less" type="text/css" href="../public/assets/css/style.less"/>
+    <script src="./assets/js/shadow-root-nav-icon.js" defer></script>
 </head>
 <nav id="nav">
     <h1 class="navTitle">Sistema de login</h1>
