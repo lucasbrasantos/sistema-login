@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
     }else if (preg_match("/([^a-zA-Z])/", $name)) {
         Header('Location: ./register.php?error=invalidusername');
         
-    }else if (preg_match("/([^a-zA-Z])/", $lastName)) {
+    }else if (preg_match("/([^a-zA-Z\d ])/", $lastName)) {
         Header('Location: ./register.php?error=invalidlastname');
         
     }else if ($pwd !== $pwd2) {
