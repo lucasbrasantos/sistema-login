@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 13-Nov-2022 às 14:48
+-- Tempo de geração: 16/11/2022 às 01:03
 -- Versão do servidor: 10.4.24-MariaDB
--- versão do PHP: 8.1.5
+-- Versão do PHP: 8.1.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,43 +24,48 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `user`
+-- Estrutura para tabela `user`
 --
 
 CREATE TABLE `user` (
-  `iduser` int(11) NOT NULL,
+  `userid` int(11) NOT NULL,
   `nome` varchar(64) NOT NULL,
+  `sobrenome` varchar(64) NOT NULL,
   `senha` varchar(64) NOT NULL,
   `email` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `user`
+-- Despejando dados para a tabela `user`
 --
 
-INSERT INTO `user` (`iduser`, `nome`, `senha`, `email`) VALUES
-(1, 'lucas', '123', 'lucas.email@lucas.com'),
-(3, 'lucas2', '12321', 'topemail@email.com');
+INSERT INTO `user` (`userid`, `nome`, `sobrenome`, `senha`, `email`) VALUES
+(1, 'a', 'a', '0cc175b9c0f1b6a831c399e269772661', 'a@a.a'),
+(2, 'b', 'b', '92eb5ffee6ae2fec3ad71c777531578f', 'b@b.b'),
+(100, 'Glen', 'Marsh', 'easierlikelysalewe', 'tiragalis@ikedivto.sl'),
+(102, 'Sarah', 'Swanson', 'sevenuphappenedwash', 'ata@lirec.pk');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `user`
+-- Índices de tabela `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`iduser`);
+  ADD PRIMARY KEY (`userid`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `email_2` (`email`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
-  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
