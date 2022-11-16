@@ -1,5 +1,7 @@
 <?php
 
+require '../../database/connection.php';
+
 $_nome = [
     "Henry",
     "Rosetta",
@@ -88,6 +90,12 @@ $_email = [
     "tiragalis@ikedivto.sl",
     "sulup@ego.lu",
 ];
+
+
+$_nome = $_nome[array_rand($_nome, 1)];
+$_unome = $_unome[array_rand($_unome, 1)];
+$_email = $_email[array_rand($_email, 1)];
+$_senha = $_senha[array_rand($_senha, 1)];
 
 
 
