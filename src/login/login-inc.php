@@ -37,8 +37,8 @@ if (isset($_POST['submit'])) {
 
                     $_SESSION["loggedin"] = true;
                     $_SESSION["sessionid"] = $userid;
-                    $_SESSION["name"] = $name;
-                    $_SESSION["lastname"] = $lastname;
+                    $_SESSION["name"] = strtoupper($name);
+                    $_SESSION["lastname"] = strtoupper($lastname);
                     header("Location: ../../public/index.php");
                     // exit();
 
