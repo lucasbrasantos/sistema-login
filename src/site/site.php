@@ -11,7 +11,12 @@ session_start();
 
 <body>
     
-<h2>eae</h2>
+<?php
+
+echo "<h2>Bem vindo: " . $_SESSION['name'] . ' ' .$_SESSION['lastname'];
+echo "</h2>"
+
+?>
 
 </body>
 
