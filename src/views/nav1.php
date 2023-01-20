@@ -11,7 +11,18 @@
         <a href="./index.php">home</a>
         <a href="../src/login/login.php">logar</a>
         <a href="../src/register/register.php">cadastrar</a>
-        <ion-icon name="person-circle-outline" class="nav-profile-icon" ></ion-icon>
+        
+        <div class="navProfile">
+            <ion-icon name="person-circle-outline" class="nav-profile-icon"></ion-icon>
+            <div class="profileMenu">
+                <div>
+                    <a href="">perfil</a>
+                </div>
+                <div>
+                    <a href="../src/logout.php">sair</a>
+                </div>
+            </div>
+        </div>
 
     </div>
 
