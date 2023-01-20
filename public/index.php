@@ -25,7 +25,7 @@ if (isset($_SESSION['sessionid'])) {
 
 ?>
 
-
+<h1>nao esta logado</h1>
 <!--  -->
 
 <?php
